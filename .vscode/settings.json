@@ -1,0 +1,7 @@
+{
+    "editor.fontLigatures": null,
+    "terminal.integrated.shellArgs.windows": [
+        "-ExecutionPolicy",
+        "Bypass"
+    ]
+}

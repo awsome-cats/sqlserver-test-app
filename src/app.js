@@ -1,4 +1,4 @@
-import express from 'express'
+import express, { urlencoded } from 'express'
 
 import config from './config.js'// .jsが必要になった
 
@@ -6,17 +6,18 @@ import config from './config.js'// .jsが必要になった
 
 import productRoutes from './routes/product.routes.js'
 
-
+/** INSTANCE */
+const app = express();
 
 
 
 
 /** MIDDLEWARE */
 
+app.use(express.json())
+app.use(express.urlencoded({ extended: false}))
 
 
-
-const app = express();
 app.use('/', productRoutes)
 
 

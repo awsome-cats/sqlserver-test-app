@@ -13,14 +13,15 @@ const dbSetting = {
 }
 
 
-async function getConnection(){
-   try {
-    const pool = await sql.connect(dbSetting)
-    return pool
+    export async function getConnection(){
+        try {
+         const pool = await sql.connect(dbSetting)
+         return pool
 
-   }catch(error) {
-       console.log(error)
-   }
-}
+        }catch(error) {
+            console.error(error)
+        }
+     }
 
-getConnection()
+    export { sql }
+

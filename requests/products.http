@@ -1,0 +1,13 @@
+@api = http://localhost:3000/products
+
+GET {{api}}
+
+###
+POST {{api}}
+Content-Type: application/json
+
+{
+    "name": "Imac",
+    "description": "new mac",
+    "quantity": 20
+}
